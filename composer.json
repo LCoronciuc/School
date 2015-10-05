@@ -1,0 +1,16 @@
+{
+    "name": "liviucoronciuc/school",
+    "description": "School Package",
+    "authors": [
+        {
+            "name": "Liviu Coroncicu",
+            "email": "liviucoronciuc@iesebre.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Com\\Iesebre\\Dam2\\liviucoronciuc\\" : "Clases"
+        }
+    },
+    "require": {}
+}
