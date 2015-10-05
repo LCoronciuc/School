@@ -197,4 +197,9 @@ class Person {
     {
         $this->personalId = $personalId;
     }
+
+    public function render()
+    {
+        echo "La persona té el nom: " . $this->getGivenName();
+    }
 }

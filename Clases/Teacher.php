@@ -6,27 +6,16 @@
  * Date: 5/10/15
  * Time: 19:10
  */
-class Teacher extends Worker
+class Teacher extends Person
 {
-    /**
-     * @var
-     */
+    use Worker;
+
     public $specialization;
 
-    /**
-     * @return mixed
-     */
-    public function getSpecialization()
+    public function render()
     {
-        return $this->specialization;
-    }
+        parent::render();
 
-    /**
-     * @param mixed $specialization
-     */
-    public function setSpecialization($specialization)
-    {
-        $this->specialization = $specialization;
     }
 
 
