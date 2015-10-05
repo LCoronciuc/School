@@ -8,26 +8,31 @@
  */
 class Student extends Person
 {
-    /**
-     * @var
-     */
-    public $classroomGroup;
+    use Worker;
 
-    /**
-     * @return mixed
-     */
-    public function getClassroomGroup()
+    public $dual = false;
+    public $specialization;
+
+
+    public function __construct($dual)
     {
-        return $this->classroomGroup;
+        parent::__construct();
+        if ($dual != null) {
+            $this->dual = $dual;
+        }
     }
 
-    /**
-     * @param mixed $classroomGroup
-     */
-    public function setClassroomGroup($classroomGroup)
+    public function render()
     {
-        $this->classroomGroup = $classroomGroup;
-    }
+        $this->type = "estudiant";
 
+        if($this->dual){
+            parent::render() . " i cobra" . $this->salary;
+        } else {
+            parent::render();
+        }
+
+        parent::render();
+    }
 
 }

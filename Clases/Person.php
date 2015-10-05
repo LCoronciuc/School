@@ -7,6 +7,9 @@
  * Time: 19:10
  */
 class Person {
+
+
+    public $type = "persona";
     /**
      * Personal identification (f.e.; DNI, NIF, NIE...)
      * @var
@@ -57,6 +60,36 @@ class Person {
      * @var
      */
     public $country;
+
+    /**
+     * Person constructor.
+     * @param string $type
+     * @param $personalId
+     * @param $givenName
+     * @param $sn1
+     * @param $sn2
+     * @param $email
+     * @param $postalAddress
+     * @param $locality
+     * @param $postalCode
+     * @param $state
+     * @param $country
+     */
+    public function __construct($type, $personalId, $givenName, $sn1, $sn2, $email, $postalAddress, $locality, $postalCode, $state, $country)
+    {
+        $this->type = $type;
+        $this->personalId = $personalId;
+        $this->givenName = $givenName;
+        $this->sn1 = $sn1;
+        $this->sn2 = $sn2;
+        $this->email = $email;
+        $this->postalAddress = $postalAddress;
+        $this->locality = $locality;
+        $this->postalCode = $postalCode;
+        $this->state = $state;
+        $this->country = $country;
+    }
+
     /**
      * @return mixed
      */
@@ -200,6 +233,6 @@ class Person {
 
     public function render()
     {
-        echo "La persona té el nom: " . $this->getGivenName();
+        echo "La {$this->type} té el nom: " . $this->getGivenName();
     }
 }
