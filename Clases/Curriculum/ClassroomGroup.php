@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: liviucoronciuc
- * Date: 5/10/15
- * Time: 20:09
- */
 
 namespace Com\Iesebre\Dam2\liviucoronciuc\Curriculum;
 
